@@ -20,7 +20,7 @@ async function fetchPlayerStats(api, playerName, elementId) {
         console.log(`Fetching stats for: ${playerName}`);
         
         // Search for player ID
-        const playerSearch = await api.players.list({ search: playerName });
+        const playerSearch = await api.players({ search: playerName });
         console.log("Player Search Response:", playerSearch);
         
         if (!playerSearch.data || playerSearch.data.length === 0) {
@@ -32,7 +32,7 @@ async function fetchPlayerStats(api, playerName, elementId) {
         console.log(`Found Player ID: ${playerId}`);
 
         // Fetch season averages
-        const statsResponse = await api.stats.seasonAverages({ season: 2023, player_ids: [playerId] });
+        const statsResponse = await api.seasonAverages({ season: 2023, player_ids: [playerId] });
         console.log("Stats Response:", statsResponse);
         
         const stats = statsResponse.data && statsResponse.data.length > 0 ? statsResponse.data[0] : {};
