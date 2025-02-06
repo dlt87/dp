@@ -1,7 +1,3 @@
-import { BalldontlieAPI } from "@balldontlie/sdk";
-
-const api = new BalldontlieAPI({ apiKey: "d585f12f-78f9-45ea-8b53-68bf4c5ddfdf" });
-
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".btn").addEventListener("click", async function(event) {
         event.preventDefault(); // Prevent page reload
