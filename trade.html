@@ -8,12 +8,14 @@
 </head>
 <body>
     <header>
-        NBA Trade Analyzer
+        <h1>NBA Trade Analyzer</h1>
     </header>
+
     <section>
-        <h1>Compare Two NBA Players</h1>
+        <h2>Compare Two NBA Players</h2>
         <p>Select two players to analyze their trade value.</p>
-        <label for="player1">Select Player 1 :</label>
+
+        <label for="player1">Select Player 1:</label>
         <select id="player1">
             <option value="LeBron James">LeBron James</option>
             <option value="Stephen Curry">Stephen Curry</option>
@@ -21,7 +23,7 @@
             <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
             <option value="Luka Doncic">Luka Doncic</option>
         </select>
-        
+
         <label for="player2">Select Player 2:</label>
         <select id="player2">
             <option value="LeBron James">LeBron James</option>
@@ -30,19 +32,21 @@
             <option value="Giannis Antetokounmpo">Giannis Antetokounmpo</option>
             <option value="Luka Doncic">Luka Doncic</option>
         </select>
-        
-        <a href="#" class="btn">Analyze Trade</a>
+
+        <button id="analyze-btn" class="btn">Analyze Trade</button>
     </section>
 
-    <div id="player1-stats"></div>
-    <div id="player2-stats"></div>
+    <section id="results">
+        <div class="player-container">
+            <div id="player1-stats" class="player-stats"></div>
+            <div id="player2-stats" class="player-stats"></div>
+        </div>
+    </section>
 
     <footer>
         &copy; 2025 NBA Trade Analyzer. All rights reserved.
     </footer>
 
-
     <script type="module" src="script.js"></script>
-    
 </body>
 </html>
